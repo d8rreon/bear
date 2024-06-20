@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bear Quiz</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="title">
+            <h1>What kind of bear are you?</h1>
+        </div>
+        <div class="questions">
+            <div class="q1">
+            <h4>Do you like Fish?</h4>
+            <img src="https://media.tenor.com/fRTyWg5TAKoAAAAM/anime-fish.gif">
+            <input type="text" placeholder="Yes or No?"><div class="button">
+                <button>Submit</button>
+
+            </div>
+            </div>
+            <div class="q2">
+            <h4>Do you like to hiberate?</h4>
+            <img src="https://media.tenor.com/5Cv48VvIMZ4AAAAM/ours-sleep.gif">
+            <input type="text" placeholder="Yes or No?"><div class="button2">
+                <button onclick=myfunction()>Submit</button>
+                <script>
+                     function myFunction() {
+                            document.getElementById("q2").innerHTML = "1 more buddy"; 
+                        }    
+                </script>
+            </div>
+            </div>
+            <div class="q3">
+                <h4>Do you like to be lazy or work hard?</h4>
+                <img src="https://i.pinimg.com/originals/d6/f9/56/d6f9560d7bf4cc39b630595050702215.gif">
+                <input type="text" placeholder="Yes or No?">
+                        <p id="bud"></p>
+                        <button onclick=myFunction()>Submit</button>
+                    <script>
+                        function myFunction() {
+                            document.getElementById("bud").innerHTML = "Almost done champ!"; 
+                        }
+                    </script>
+                
+                
+            </div>
+    
+        </div>
+        <div class="result">
+            <button id="bearButton">Click here for results</button>
+            <p></p>
+        
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const button = document.querySelector("#bearButton");
+                    const para = document.querySelector("p");
+        
+                    var words = ['Black bear', 'Polar Bear', 'Brown Bear', 'Panda Bear'];
+        
+                    button.addEventListener("click", function() {
+                        para.innerHTML = words[Math.floor(Math.random() * words.length)];
+                    });
+                });
+            </script>
+        </div>
+ </div>
+        </div>
+    </body>
+</html>
